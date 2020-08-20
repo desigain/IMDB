@@ -48,7 +48,4 @@ export class Professional
 }
 
 
-<<<<<<< HEAD
 //comentario de prueba
-=======
->>>>>>> d382bf0b295bb8b4f77653b40eb7c2432d9a21c5
