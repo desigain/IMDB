@@ -6,7 +6,7 @@ export class Movie {
   public director: string;
   public writer: string;
   public language: string;
-  public platform: number;
+  public platform: string;
   public isMCU: boolean;
   public mainCharacterName: string;
   public producer: string;
