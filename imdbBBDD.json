@@ -1,0 +1,16 @@
+{
+    "peliculas": [
+        {
+            "title": "Frozen II",
+            "releaseYear": 2020,
+            "nacionality": "EEUU",
+            "genre": "Infantil"
+        },
+        {
+            "title": "Rambo",
+            "releaseYear": 1998,
+            "nacionality": "China",
+            "genre": "Acción"
+        }
+    ]
+}

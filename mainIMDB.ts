@@ -1,4 +1,5 @@
 const fs = require("file-system");
+const file = 'imdbBBDD.json';
 import { IMDB } from "./IMDB";
 import { Movie } from "./movie";
 
@@ -13,6 +14,13 @@ console.log(totalMovie.peliculas[0].genre);
 let movies = JSON.stringify(totalMovie);
 
 console.log(movies);
+
+fs.writeFile(file, movies, function (err) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log("Archivo guardado correctamente...");
+});
 
 
 // console.log(JSON.stringify(totalMovie.peliculas[0]));
