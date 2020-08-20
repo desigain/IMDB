@@ -53,9 +53,7 @@ export class Professional {
 
   //Otros métodos
   public showAttributes() {
-    console.log(
-      `Name:   ${this.name}  \n  Age:   ${this.age}  \n  Genre:   ${this.genre}  \n  Weight:  ${this.weight}  \n  Height:   ${this.height} \n  Hair Color:   ${this.hairColor}  \n Eye Color:   ${this.eyeColor} \n  Race:   ${this.race}  \n  Is Retired?   ${this.isRetired}  \n  Nationality:  ${this.nationality}  \n  Oscars Number:   ${this.oscasrsNumber}  \n  Profession:  ${this.profession} \n`
-    );
+    console.log(`Name: ${this.name} \n Age: ${this.age} \n Genre: ${this.genre} \n Weight: ${this.weight} \n Height: ${this.height} \n Hair Color: ${this.hairColor} \n Eye Color: ${this.eyeColor} \n Race: ${this.race} \n Is Retired? ${this.isRetired} \n Nationality: ${this.nationality} \n Oscars Number: ${this.oscasrsNumber} \n Profession: ${this.profession}\n`);
   }
 }
 
