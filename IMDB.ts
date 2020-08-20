@@ -1,6 +1,13 @@
 //Crear una clase denominada Professional con atributos públicos
 
-class Professional 
+// Creando un enumerator para las profesiones y después pasarlas por la clase
+export enum profesiones {
+    actor = "Actor",
+    guionista = "Guionista",
+    director = "Director"
+}
+
+export class Professional 
 {
     //Declaración de atributos o propiedades
     public name: string; 
@@ -14,10 +21,10 @@ class Professional
     public isRetired: boolean;
     public nationality: string;
     public oscasrsNumber: number; 
-    public profession: Enumerator //Los valores del enumerado tienen un valor numérico que empieza por 0 http://lineadecodigo.com/typescript/enumerados-en-typescript/
+    public profession: profesiones //Los valores del enumerado tienen un valor numérico que empieza por 0 http://lineadecodigo.com/typescript/enumerados-en-typescript/
 
     //Implementación del método constructor
-    constructor (name:string, age:number, genre:string, weight:number, height:number, hairColor:string, eyeColor:string, race:string, isRetired:boolean, nationality:string, oscarsNumber:number, profession:Enumerator)
+    constructor (name:string, age:number, genre:string, weight:number, height:number, hairColor:string, eyeColor:string, race:string, isRetired:boolean, nationality:string, oscarsNumber:number, profession:profesiones)
     {
         this.name = name;
         this.age = age;
@@ -36,9 +43,12 @@ class Professional
     //Otros métodos
     public showAttributes()
     { 
-        console.log(`Name:   ${this.name}  \n  Age:   ${this.age}  \n  Genre:   ${this.genre}  \n  Weight:  ${this.weight}  \n  Height:   ${this.height } \n  Hair Color:   ${this.hairColor} + \n Eye Color:   ${this.eyeColor } \n  Race:   ${this.race}  \n  Is Retired?   ${this.isRetired}  \n  Nationality:  ${this.nationality}  \n  Oscars Number:   ${this.oscasrsNumber}  \n  Profession:  ${this.profession} \n`);
+        console.log(`Name:   ${this.name}  \n  Age:   ${this.age}  \n  Genre:   ${this.genre}  \n  Weight:  ${this.weight}  \n  Height:   ${this.height } \n  Hair Color:   ${this.hairColor}  \n Eye Color:   ${this.eyeColor } \n  Race:   ${this.race}  \n  Is Retired?   ${this.isRetired}  \n  Nationality:  ${this.nationality}  \n  Oscars Number:   ${this.oscasrsNumber}  \n  Profession:  ${this.profession} \n`);
     }
 }
 
 
+<<<<<<< HEAD
 //comentario de prueba
+=======
+>>>>>>> d382bf0b295bb8b4f77653b40eb7c2432d9a21c5
