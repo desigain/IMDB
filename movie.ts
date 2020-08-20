@@ -1,10 +1,12 @@
+import { Professional } from "./professional";
+
 export class Movie {
   public title: string;
   public releaseYear: number;
-  public actors: string;
+  public actors: Professional[];  // El atributo profesion es actor
   public nacionality: string;
-  public director: string;
-  public writer: string;
+  public director: Professional;  // Su atributo profesion es director
+  public writer: Professional;   // Su atributo profesion es guionista
   public language: string;
   public platform: string;
   public isMCU: boolean;
@@ -25,7 +27,7 @@ export class Movie {
     this.genre = genre;
   }
 
-  showMovies() {
+  public showMovies() {
     console.log(
       `\n Titulo :${this.title} \n Año: ${this.releaseYear} \n País: ${this.nacionality} \n Género: ${this.genre} \n`
     );
