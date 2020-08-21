@@ -1,6 +1,9 @@
-//Requerimos la libreria filesystem para convertir a JSON el objeto IMBD...
+//Requerimos la libreria filesystem para convertir a JSON el objeto IMBD... Link: https://www.npmjs.com/package/file-system libreria
 const fs = require("file-system");
+
+// Creamos una variable con el nombre que queremos que tenga nuestro JSON
 const file = 'imdbBBDD.json';
+
 // Crear un fichero main pra probar esta clase creando un objeto de tipo IMDB.
 //Importamos antes la clase IMDB que hemos creado y también las clases anteriores, Movie, Professional y profesiones, porque serán datos que estén dentro de nuestro objeto IMDB ahora.
 import { IMDB } from "./IMDB";
@@ -95,18 +98,37 @@ let arrFilms: Movie [] = [movie2, movie3, movie4];
 //Ahora podemos crear el objeto de clase IMDB, incluyendo estas películas en un array de Movie, tal y como pide el constructor
 let myIMBD = new IMDB (arrFilms);
 
+
 // console.log(myIMBD.peliculas);  Comprobamos que el objeto IMDB funciona y muestra toa la información de las peliculas, muestras tambien
 // la información de los objetos director y guionista
 
-// Guardamos
-let movies = JSON.stringify(myIMBD.peliculas);
+// Guardamos el objeto de las peliculas en formato JSON
+let moviesIMDB = JSON.stringify(myIMBD.peliculas);
 
-
-// Utilizamos el metodo de la libreria filesystem para crear el JSON
-fs.writeFile(file, movies, function (err) {
+// CONVERTIR A JSON
+//Utilizamos el metodo de la libreria filesystem para crear el JSON.
+//Este método recibe como parámetros las moviesIMDB, que es el nombre de la variable en la que guardamos nuestro archivo json que creamos.
+//Devuelve el archivo creado en JSON, es decir, lo "escribe" 
+fs.writeFile(file, moviesIMDB, function (err) {
     if (err) {
       return console.log(err);
     }
     console.log("Archivo guardado correctamente...");
   });
+// Después de compilar y ejecutar la función anterior obtenemos un archivo .json con el nombre que indicamos al principio imdbBBDD y todo el contenido (objetos)
+
+// Una vez tenemos el archivo .json creado, lo leemos utilizando la siguiente función:
+// Recibe como parámetros el objeto json que ya tenemos creado y nos mostraría si hubiera un error, de qué tipo sería (err) 
+//De lo contrario nos muestra el archivo por consola (file), parseado como un objeto de nuevo con el que poder trabajar y acceder a sus atributos
+fs.readFile('imdbBBDD.json', (err, file) => {
+    if (err) throw err;
+    let readObject = JSON.parse(file);
+    console.log(readObject); // ahora nuestro objeto se llama así
+});
+
+console.log('Aqui estamos despues de la llamada');
+
+  
+  // const readObject = fs.readFileSync('imdbBBDD.json', 'utf-8');
+  // JSON.parse
 
