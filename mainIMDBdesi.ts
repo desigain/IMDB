@@ -1,3 +1,6 @@
+//Requerimos la libreria filesystem para convertir a JSON el objeto IMBD...
+const fs = require("file-system");
+const file = 'imdbBBDD.json';
 // Crear un fichero main pra probar esta clase creando un objeto de tipo IMDB.
 //Importamos antes la clase IMDB que hemos creado y también las clases anteriores, Movie, Professional y profesiones, porque serán datos que estén dentro de nuestro objeto IMDB ahora.
 import { IMDB } from "./IMDB";
@@ -92,5 +95,18 @@ let arrFilms: Movie [] = [movie2, movie3, movie4];
 //Ahora podemos crear el objeto de clase IMDB, incluyendo estas películas en un array de Movie, tal y como pide el constructor
 let myIMBD = new IMDB (arrFilms);
 
-console.log(myIMBD.peliculas);
+// console.log(myIMBD.peliculas);  Comprobamos que el objeto IMDB funciona y muestra toa la información de las peliculas, muestras tambien
+// la información de los objetos director y guionista
+
+// Guardamos
+let movies = JSON.stringify(myIMBD.peliculas);
+
+
+// Utilizamos el metodo de la libreria filesystem para crear el JSON
+fs.writeFile(file, movies, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("Archivo guardado correctamente...");
+  });
 
