@@ -11,5 +11,4 @@ import {Movie} from "./movie"
     {
       this.peliculas = peliculas;
     }
-    
   }

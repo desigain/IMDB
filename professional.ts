@@ -20,7 +20,7 @@ export class Professional {
   public isRetired: boolean;
   public nationality: string;
   public oscasrsNumber: number;
-  public profession: profesiones; //Los valores del enumerado tienen un valor numérico que empieza por 0 http://lineadecodigo.com/typescript/enumerados-en-typescript/
+  public profession: profesiones; // Más info sobre enumerados en links https://www.tutorialsteacher.com/typescript/typescript-enum, http://lineadecodigo.com/typescript/enumerados-en-typescript/
 
   //Implementación del método constructor
   constructor(
@@ -57,5 +57,3 @@ export class Professional {
   }
 }
 
-
-//comentario de prueba
