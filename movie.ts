@@ -38,7 +38,7 @@ export class Movie {
 
     for (let i=0; i<this.actors.length; i++)  // Creamos un buclee porque el atributo actores es un ARRAY DE OBJETOS DE CLASE PROFESSIONAL. De esta manera podemos acceder al atributo nombre de cada uno.
     {
-      console.log ("-" + this.actors[i].showAttributes()); // se pueden sacar todos los atributos llamando al método showAttributes()
+      console.log (this.actors[i].showAttributes()); // se pueden sacar todos los atributos llamando al método showAttributes()
     }
 
     console.log("Nacionalidad: " + this.nacionality + "\n" + "Director: " + this.director.name +                //continuamos con el resto del mensaje a mostrar. Tanto director como guionista son OBJETOS DE CLASE PROFESIONAL pero podemos acceder a sus atributos directamente al no ser un array.
