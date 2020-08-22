@@ -24,3 +24,5 @@ fs.writeFile(file, movies, function (err) {
 
 
 // console.log(JSON.stringify(totalMovie.peliculas[0]));
+
+myIMDB

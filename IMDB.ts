@@ -12,3 +12,16 @@ import {Movie} from "./movie"
       this.peliculas = peliculas;
     }
   }
+  rl.question ("Título: " +  "Año de lanzamiento: " + "Nacionalidad: " +  "Género: ")
+
+  constructor(
+    title: string,
+    releaseYear: number,
+    nacionality: string,
+    genre: string
+  ) {
+    this.title = title;
+    this.releaseYear = releaseYear;
+    this.nacionality = nacionality;
+    this.genre = genre;
+  }
