@@ -6,28 +6,44 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-readline.question("Titulo: ", function (title: string) {
-  readline.question("Año: ", function (releaseYear: number) {
-    readline.question("País: ", function (nacionality: string) {
-      readline.question("Género: ", function (genre: string) {
-        let movie1 = new Movie(title, releaseYear, nacionality, genre);
-        let movie2 = new Movie(title, releaseYear, nacionality, genre);
+// Ejemplo para encontrar la pelicula que se quiera ver
 
-        // console.log(movie1);
+readline.question("Que pelicula quieres ver??: ", (answer) => {
 
-        let objetoPrueba: IMDB = new IMDB([]);
+    let numero = 0;
 
-        objetoPrueba.obtenerInstancia("prueba.json");
-        console.log(objetoPrueba);
-        console.log(objetoPrueba.peliculas);
+    numero = answer;
 
-        objetoPrueba.peliculas.push(movie1);
+    let myIMDB : IMDB = new IMDB ([]);
 
-        console.log(objetoPrueba);
+    myIMDB.obtenerInstancia("prueba.json");
 
-        objetoPrueba.escribirJSON("prueba.json");
+    console.log(myIMDB.peliculas[numero]);
+    
+
+// readline.question("Titulo: ", function (title: string) {
+//   readline.question("Año: ", function (releaseYear: number) {
+//     readline.question("País: ", function (nacionality: string) {
+//       readline.question("Género: ", function (genre: string) {
+//         let movie1 = new Movie(title, releaseYear, nacionality, genre);
+
+//         // console.log(movie1);
+
+//         let objetoPrueba: IMDB = new IMDB([]);
+
+//         objetoPrueba.obtenerInstancia("prueba.json");
+//         console.log(objetoPrueba);
+//         console.log(objetoPrueba.peliculas);
+
+//         objetoPrueba.peliculas.push(movie1);
+
+//         console.log(objetoPrueba);
+
+//         objetoPrueba.escribirJSON("prueba.json");
         readline.close();
-      });
-    });
-  });
+//       });
+//     });
+//   });
+
+
 });
