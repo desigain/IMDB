@@ -17,8 +17,6 @@ readline.question("Titulo: ", function (title: string) {
 
         let objetoPrueba: IMDB = new IMDB([]);
 
-        // //   objetoPrueba.escribirJSON("prueba.json");
-
         objetoPrueba.obtenerInstancia("prueba.json");
         console.log(objetoPrueba);
         console.log(objetoPrueba.peliculas);
@@ -28,10 +26,6 @@ readline.question("Titulo: ", function (title: string) {
         console.log(objetoPrueba);
 
         objetoPrueba.escribirJSON("prueba.json");
-
-        //   console.log(infoJSON);
-
-        //   objetoPrueba.escribirJSON("prueba.json");
         readline.close();
       });
     });
