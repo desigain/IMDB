@@ -6,7 +6,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-// Ejemplo para encontrar la pelicula que se quiera ver
+// EJEMPLO PARA ENCONTRAR LA PELICULA QUE SE QUIERA VER
 
 readline.question("Que pelicula quieres ver??: ", (answer) => {
 
